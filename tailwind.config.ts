@@ -11,8 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "dark-charcoal": "#333333",
+        "royal-blue": "#2B60DE",
       },
     },
   },
   plugins: [],
+  darkMode: "class",
 } satisfies Config;
