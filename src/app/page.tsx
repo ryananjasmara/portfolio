@@ -95,7 +95,7 @@ export default function Home() {
 
   useEffect(() => {
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768); // 768px is Tailwind's md breakpoint
+      setIsMobile(window.innerWidth < 768);
     };
 
     checkIsMobile();
