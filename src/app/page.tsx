@@ -328,6 +328,10 @@ export default function Home() {
             alt="Next.js"
           />
           <img
+            src="https://img.shields.io/badge/Vue.js-4FC08D?logo=vue.js&logoColor=white&style=flat-rounded"
+            alt="Vue.js"
+          />
+          <img
             src="https://img.shields.io/badge/Refine.js-0081FB?logo=refine&logoColor=white&style=flat-rounded"
             alt="Refine.js"
           />
@@ -549,7 +553,7 @@ export default function Home() {
 
   const renderPortfolio = () => {
     const filteredPortfolio = portfolio.filter(
-      item => filter === "all" || item.type === filter
+      (item) => filter === "all" || item.type === filter
     );
 
     return (
@@ -583,7 +587,7 @@ export default function Home() {
         </div>
         {/* Portfolio Section */}
         <div className="flex flex-col gap-4">
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             layout
           >
@@ -704,7 +708,7 @@ export default function Home() {
             exit="exit"
             transition={{
               x: { type: "tween", duration: 0.3 },
-              opacity: { duration: 0.2 }
+              opacity: { duration: 0.2 },
             }}
           >
             {currentTab === "about" && renderAbout()}
