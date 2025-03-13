@@ -75,6 +75,12 @@ const portfolioItems = [
     image: "assurno-admin.png",
     link: "/images/portfolio/assurno-admin.png",
   },
+  {
+    title: "Tanya Penghulu",
+    type: "web",
+    image: "tanya-penghulu.png",
+    link: "https://tanya-penghulu.vercel.app/",
+  },
 ];
 
 export default function Home() {
