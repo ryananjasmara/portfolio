@@ -1,27 +1,35 @@
 import { Mail, User, File, Briefcase, Book, Menu } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface TabProps {
-  isMobile: boolean;
-  isMenuOpen: boolean;
   currentTab: string;
   setCurrentTab: (tab: string) => void;
-  setIsMenuOpen: (open: boolean) => void;
 }
 
-export default function Tab({
-  isMobile,
-  isMenuOpen,
-  currentTab,
-  setCurrentTab,
-  setIsMenuOpen,
-}: TabProps) {
-  const tabItems = [
-    { id: "about", icon: <User />, label: "About" },
-    { id: "resume", icon: <File />, label: "Resume" },
-    { id: "portfolio", icon: <Briefcase />, label: "Portfolio" },
-    { id: "blog", icon: <Book />, label: "Blog" },
-    { id: "contact", icon: <Mail />, label: "Contact" },
-  ];
+const tabItems = [
+  { id: "about", icon: <User />, label: "About" },
+  { id: "resume", icon: <File />, label: "Resume" },
+  { id: "portfolio", icon: <Briefcase />, label: "Portfolio" },
+  { id: "blog", icon: <Book />, label: "Blog" },
+  { id: "contact", icon: <Mail />, label: "Contact" },
+];
+
+export default function Tab({ currentTab, setCurrentTab }: TabProps) {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
 
   return (
     <div className="flex items-center justify-center w-full md:mt-12 mt-4 text-white">

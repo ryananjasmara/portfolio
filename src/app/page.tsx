@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Tab from "./__partials__/Tab";
 import Resume from "./__partials__/Resume";
@@ -11,21 +11,6 @@ import Contact from "./__partials__/Contact";
 
 export default function Home() {
   const [currentTab, setCurrentTab] = useState("about");
-  const [isMobile, setIsMobile] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkIsMobile);
-    };
-  }, []);
 
   const renderMainContent = () => {
     const slideVariants = {
@@ -72,13 +57,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center min-h-screen">
-      <Tab
-        isMobile={isMobile}
-        isMenuOpen={isMenuOpen}
-        currentTab={currentTab}
-        setCurrentTab={setCurrentTab}
-        setIsMenuOpen={setIsMenuOpen}
-      />
+      <Tab currentTab={currentTab} setCurrentTab={setCurrentTab} />
       {renderMainContent()}
     </div>
   );
