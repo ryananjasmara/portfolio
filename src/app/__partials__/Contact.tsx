@@ -3,7 +3,6 @@ import {
   LinkedinIcon,
   MailIcon,
   PhoneIcon,
-  DiscIcon,
 } from "lucide-react";
 
 export default function Contact() {
@@ -45,19 +44,6 @@ export default function Contact() {
       >
         <div className="flex flex-col p-4 justify-center items-center gap-2 bg-dark-charcoal rounded-full">
           <PhoneIcon className="w-10 h-10" />
-        </div>
-      </button>
-      <button
-        className="hover:scale-105 transition-all duration-300"
-        onClick={() =>
-          window.open(
-            "https://discord.com/users/againstallthemadness",
-            "_blank"
-          )
-        }
-      >
-        <div className="flex flex-col p-4 justify-center items-center gap-2 bg-dark-charcoal rounded-full">
-          <DiscIcon className="w-10 h-10" />
         </div>
       </button>
     </div>
