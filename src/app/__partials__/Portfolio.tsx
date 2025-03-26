@@ -51,6 +51,12 @@ const portfolioItems = [
     image: "tanya-penghulu.png",
     link: "https://tanya-penghulu.vercel.app/",
   },
+  {
+    title: "RPS Fighting Game",
+    type: "web",
+    image: "rps-fighting-game.png",
+    link: "https://v0-rps-fighting-game.vercel.app/",
+  },
 ];
 
 export default function Portfolio() {
