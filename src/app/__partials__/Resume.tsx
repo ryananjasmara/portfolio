@@ -19,6 +19,18 @@ const educations = [
 const experiences = [
   {
     title: "Frontend Engineer",
+    subtitle: "Prudential Indonesia",
+    period: "Apr, 2025 - Present",
+    location: "Jakarta, Indonesia",
+    descriptions: [
+      "Developed a React Native Insurance Mobile Apps for the Agent (Sales).",
+      "Developed a Angular Backoffice System.",
+      "Write comprehensive unit tests using Jest to ensure the reliability of the mobile application.",
+      "Implemented Agent Resignation and Termination feature.",
+    ],
+  },
+  {
+    title: "Frontend Engineer",
     subtitle: "Forgerz",
     period: "Sep, 2024 - Jan, 2025",
     location: "French (Remote)",
