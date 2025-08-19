@@ -32,7 +32,7 @@ const experiences = [
   {
     title: "Frontend Engineer",
     subtitle: "Forgerz",
-    period: "Sep, 2024 - Jan, 2025",
+    period: "Sep, 2024 - Apr, 2025",
     location: "French (Remote)",
     descriptions: [
       "Developed a customer-facing insurance web application using Next.js.",
