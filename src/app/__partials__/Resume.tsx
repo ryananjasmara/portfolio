@@ -27,6 +27,10 @@ const experiences = [
       "Developed a Angular Backoffice System.",
       "Write comprehensive unit tests using Jest to ensure the reliability of the mobile application.",
       "Implemented Agent Resignation and Termination feature.",
+      "Developed a ReactJS Customer Service Web Application.",
+      "Developed a ReactJS Admin Portal Web Application.",
+      "Developed a Kotlin Android Insurance Mobile Apps for the Agent."
+
     ],
   },
   {
