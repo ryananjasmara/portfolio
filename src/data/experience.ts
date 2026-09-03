@@ -35,7 +35,7 @@ export const experiences: ExperienceItem[] = [
     title: "Frontend Engineer",
     subtitle: "Forgerz",
     period: "Sep, 2024 - Apr, 2025",
-    location: "French (Remote)",
+    location: "France (Remote)",
     descriptions: [
       "Developed a customer-facing insurance web application using Next.js.",
       "Built an admin panel for managing the insurance application using Refine.js.",
