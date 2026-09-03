@@ -1,7 +1,6 @@
-import { Flower, Briefcase, Download } from "lucide-react";
-import Timeline from "@/components/Timeline";
+import type { EducationItem, ExperienceItem } from "@/types/content";
 
-const educations = [
+export const educations: EducationItem[] = [
   {
     title: "Bachelor of Science in Computer Science",
     subtitle: "University of Politeknik Caltex",
@@ -16,7 +15,7 @@ const educations = [
   },
 ];
 
-const experiences = [
+export const experiences: ExperienceItem[] = [
   {
     title: "Frontend Engineer",
     subtitle: "Prudential Indonesia",
@@ -29,8 +28,7 @@ const experiences = [
       "Implemented Agent Resignation and Termination feature.",
       "Developed a ReactJS Customer Service Web Application.",
       "Developed a ReactJS Admin Portal Web Application.",
-      "Developed a Kotlin Android Insurance Mobile Apps for the Agent."
-
+      "Developed a Kotlin Android Insurance Mobile Apps for the Agent.",
     ],
   },
   {
@@ -96,40 +94,3 @@ const experiences = [
     ],
   },
 ];
-
-export default function Resume() {
-  return (
-    <div className="flex flex-col p-4 gap-8">
-      {/* Education Section */}
-      <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-2">
-          <h2 className="text-xl font-semibold">Education</h2>
-          <Flower className="w-6 h-6" />
-        </div>
-        <Timeline items={educations} />
-      </div>
-
-      {/* Experience Section */}
-      <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-2">
-          <h2 className="text-xl font-semibold">Experience</h2>
-          <Briefcase className="w-6 h-6" />
-        </div>
-        <Timeline items={experiences} />
-      </div>
-
-      {/* Button to download resume */}
-      <div className="flex justify-end">
-        <button
-          className="bg-dark-charcoal text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-dark-charcoal/80 transition-colors"
-          onClick={() =>
-            window.open("/files/RyanAnjasmaraResume2025.pdf", "_blank")
-          }
-        >
-          <Download className="w-4 h-4" />
-          Download Resume
-        </button>
-      </div>
-    </div>
-  );
-}

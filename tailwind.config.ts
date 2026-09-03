@@ -9,13 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        "dark-charcoal": "#333333",
-        "royal-blue": "#2B60DE",
+        background: "var(--color-background)",
+        surface: "var(--color-surface)",
+        "surface-hover": "var(--color-surface-hover)",
+        border: "var(--color-border)",
+        foreground: "var(--color-foreground)",
+        muted: "var(--color-muted)",
+        accent: "var(--color-accent)",
+        "accent-foreground": "var(--color-accent-foreground)",
       },
     },
   },
   plugins: [],
-  darkMode: "class",
 } satisfies Config;

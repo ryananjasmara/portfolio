@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ryan - Personal Portfolio",
-  description: "Ryan - Personal Portfolio",
+  title: "Ryan Anjasmara — Software Engineer",
+  description:
+    "Portfolio of Ryan Anjasmara, a Software Engineer specializing in React Native, React and Next.js for scalable web and mobile applications.",
+  openGraph: {
+    title: "Ryan Anjasmara — Software Engineer",
+    description:
+      "Portfolio of Ryan Anjasmara, a Software Engineer specializing in React Native, React and Next.js for scalable web and mobile applications.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
